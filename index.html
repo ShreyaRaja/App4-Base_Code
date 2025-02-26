@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to help patients distinguish between a sprain and a broken bone
  
 Known Issues:
 blah, blah, blah, blah
@@ -70,46 +70,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
 	<script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var sprain_count = 0;
+        var break_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function sprainAdd(){
+            sprain_count = sprain_count + 1;
 		//alert(allergy_count); 
         //used to test to troubleshoot
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function breakAdd(){
+            break_count = break_count + 1;
         }
 
-        function totalAllergyPercent(){
-            var allergyPercent = (allergy_count / 6)*100; //calculates averages and multiply by 100 to make percent. I wasn't able to figure out how to add a percent sign.
-            var coldPercent = (cold_count / 6)*100;
+        function totalSprainPercent(){
+            var sprainPercent = (sprain_count / 6)*100; //calculates averages and multiply by 100 to make percent. I wasn't able to figure out how to add a percent sign.
+            var breakPercent = (break_count / 6)*100;
 
-            var resultText = document.getElementById('allergyText'); //allows us to call it in HTML
+            var resultText = document.getElementById('sprainText'); //allows us to call it in HTML
             resultText.innerHTML = allergyPercent;
 
-            var resultText2 = document.getElementById('coldText');
+            var resultText2 = document.getElementById('breakText');
             resultText2.innerHTML = coldPercent;
         };
-/*
-        function allergyPercent(){
-            var allergyAdd = 0.0
-            allergyAdd = allergy_count/6
-            allergyAdd = allergyAdd*100
-            return allergyAdd
-        }
-
-        function coldPercent(){
-            var coldAdd = 0.0
-            coldAdd = cold_count/6
-            coldAdd = coldAdd*100
-            return coldAdd
-        }
-*/
 
   </script>
 
@@ -158,8 +143,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p style= "color: #3f093f"> <b> Are your eyes watery or itchy? </b> </p> <!--asking question-->
-        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to allergy counter--> <!--next page-->
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to cold counter--> <!--next page-->
+        <a href="#two"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+        <a href="#two"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
     	</div>
 </div>
 
@@ -172,8 +157,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     -->
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Do you have a fever? </b> </p> <!--asking question-->
-        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to cold counter--> <!--next page-->
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#three"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+        <a href="#three"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
 	</div>
 </div>	
 
@@ -184,8 +169,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Do you have a sore throat? </b> </p> <!--asking question-->
-        <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to cold counter--> <!--next page-->
-        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#four"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+        <a href="#four"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
 	</div>
 </div>	
 
@@ -197,7 +182,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Are your symptoms seasonal or chronic? </b> </p> <!--asking question-->
         <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to allergy counter--> <!--next page-->
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to cold counter--> <!--next page-->
+        <a href="#five"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
 	</div>
 </div>
 
@@ -208,8 +193,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Are you sneezing? </b> </p> <!--asking question-->
-        <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to allergy counter--> <!--next page-->
-        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to cold counter--> <!--next page-->
+        <a href="#six"  onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#six"  onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
 	</div>
 </div>
 
@@ -220,8 +205,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Do you have a cough? </b> </p> <!--asking question-->
-        <a href="#resultsPage"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to cold counter--> <!--next page-->
-        <a href="#resultsPage"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#resultsPage"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+        <a href="#resultsPage"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
 </div>
 
 <div class="page" id="resultsPage">
@@ -239,8 +224,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="huzzahPage">
 	<div class="w3-container w3-flat-carrot">
 		<h1>HUZZAH!</h1> <!--page header name-->
-        <p>Allergy Percentage is: </p> <p id="allergyText"></p> <!--displays allergy percentage-->
-        <p>Cold Percentage is: </p> <p id="coldText"></p> <!--displays cold percentage-->
+        <p>Broken bone Percentage is: </p> <p id="breakText"></p> <!--displays broken bone percentage-->
+        <p>Sprain Percentage is: </p> <p id="sprainText"></p> <!--displays sprain percentage-->
 	</div>
 	
 	<div id="content" class="w3-container">
