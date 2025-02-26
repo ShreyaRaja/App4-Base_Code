@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The goal of this code is to help patients distinguish between a sprain and a broken bone
  
 Known Issues:
-blah, blah, blah, blah
+None yet!!!
 Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
 References:
@@ -39,29 +39,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
-	var sprain_count = 0;
-    var break_count = 0;
+	var sprain_count = 0; //establish variable and set it to 0
+    var break_count = 0; //establish variable and set it to 0
 
     function sprainAdd(){
-        sprain_count = sprain_count + 1;
+        sprain_count = sprain_count + 1; //every time a button attatched to sprain count is clicked, one is added to counter
     }
 
     function breakAdd(){
-        break_count = break_count + 1;
+        break_count = break_count + 1; //works same as above for break count this time
     }
 
     function totalSprainPercent(){
         var sprainPercent = (sprain_count / 6) * 100; // calculates averages and multiply by 100 to make percent
-        var breakPercent = (break_count / 6) * 100;
+        var breakPercent = (break_count / 6) * 100;  //same as above but for break
 
         var resultText = document.getElementById('sprainText'); // allows us to call it in HTML
-        resultText.innerHTML = sprainPercent + "%"; // Added quotes around percent sign
+        resultText.innerHTML = sprainPercent + "%"; // text displays results for sprain
 
         var resultText2 = document.getElementById('breakText');
-        resultText2.innerHTML = breakPercent + "%"; // Added quotes around percent sign
+        resultText2.innerHTML = breakPercent + "%"; // text displays results for break
     }
 </script>	
-
+<!-- formatting dont mess -->
 <style>	
 .body {
      margin: 0em;
@@ -83,8 +83,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 1;
 }
 
-.page-background { /* Added new class for page background color */
-    background-color: hsl(231, 59%, 72%); /* This code makes the background color of the page purple */
+.page-background { 
+    background-color: hsl(231, 59%, 72%); /* This code makes the background color of the page purple! */
 }
 </style>
 
@@ -95,12 +95,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are you feeling like you might have a broken bone but wonder if it is a sprain? Answer a few short questions to find out!</p>
-		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started :) </a>
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	</div>
 
-	<div class="page page-background" id="one"> <!-- Added class for page background color -->
+	<div class="page" id="one"> <!-- created page -->
 		<div id="header" class="w3-container w3-flat-carrot">
 			<h1>Question 1</h1> <!--page header name-->
 		</div>
@@ -111,7 +111,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    </div>
 	</div>
 
-	<div class="page page-background" id="two"> <!-- Added class for page background color -->
+	<div class="page" id="two"> <!-- created page -->
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 2</h1> <!--page header name-->
 		</div>
@@ -122,7 +122,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	</div>	
 
-	<div class="page page-background" id="three"> <!-- Added class for page background color -->
+	<div class="page" id="three"> <!-- created page -->
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 3</h1> <!--page header name-->
 		</div>
@@ -133,7 +133,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	</div>	
 
-	<div class="page page-background" id="four"> <!-- Added class for page background color -->
+	<div class="page" id="four"> <!-- created page -->
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 4</h1> <!--page header name-->
 		</div>
@@ -144,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	</div>
 
-	<div class="page page-background" id="five"> <!-- Added class for page background color -->
+	<div class="page" id="five"> <!-- created page -->
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 5</h1> <!--page header name-->
 		</div>
@@ -155,7 +155,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	</div>
 
-	<div class="page page-background" id="six"> <!-- Added class for page background color -->
+	<div class="page" id="six"> <!-- created page -->
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 6</h1> <!--page header name-->
 		</div>
