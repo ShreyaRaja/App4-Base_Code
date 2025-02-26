@@ -44,7 +44,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function sprainAdd(){
             sprain_count = sprain_count + 1;
-		//alert(allergy_count); 
+		//alert(sprain_count); 
        		//used to test to troubleshoot
         }
 
@@ -117,7 +117,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1> <!--page header name-->
+	<h1>Broken bone or Sprain?</h1> <!--page header name-->
 </div>
 	
 <div id="content" class="w3-container">
@@ -151,7 +151,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Do you have a fever? </b> </p> <!--asking question-->
         <a href="#three"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#three"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#three"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 	</div>
 </div>	
 
@@ -163,7 +163,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Do you have a sore throat? </b> </p> <!--asking question-->
         <a href="#four"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#four"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#four"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 	</div>
 </div>	
 
@@ -174,8 +174,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Are your symptoms seasonal or chronic? </b> </p> <!--asking question-->
-        <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to allergy counter--> <!--next page-->
-        <a href="#five"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
+        <a href="#five"  onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
+        <a href="#five"  onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
 	</div>
 </div>
 
@@ -186,7 +186,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Are you sneezing? </b> </p> <!--asking question-->
-        <a href="#six"  onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#six"  onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
         <a href="#six"  onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
 	</div>
 </div>
@@ -199,7 +199,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p style= "color: #3f093f"> <b> Do you have a cough? </b> </p> <!--asking question-->
         <a href="#resultsPage"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#resultsPage"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to allergy counter--> <!--next page-->
+        <a href="#resultsPage"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 </div>
 
 <div class="page" id="resultsPage">
