@@ -28,45 +28,40 @@ https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
+<!DOCTYPE html>
+<html lang="en">
 <head> 
-	<title>Hello World</title>  
-]	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Broken Bone or Sprain</title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="w3-colors-flat.css">
 </head> 
 
 <script>
-
 	var sprain_count = 0;
-        var break_count = 0;
+    var break_count = 0;
 
+    function sprainAdd(){
+        sprain_count = sprain_count + 1;
+    }
 
-        function sprainAdd(){
-            sprain_count = sprain_count + 1;
-		//alert(sprain_count); 
-       		//used to test to troubleshoot
-        }
+    function breakAdd(){
+        break_count = break_count + 1;
+    }
 
-        function breakAdd(){
-            break_count = break_count + 1;
-        }
+    function totalSprainPercent(){
+        var sprainPercent = (sprain_count / 6) * 100; // calculates averages and multiply by 100 to make percent
+        var breakPercent = (break_count / 6) * 100;
 
-        function totalSprainPercent(){
-            var sprainPercent = (sprain_count / 6)*100; //calculates averages and multiply by 100 to make percent. I wasn't able to figure out how to add a percent sign.
-            var breakPercent = (break_count / 6)*100;
+        var resultText = document.getElementById('sprainText'); // allows us to call it in HTML
+        resultText.innerHTML = sprainPercent + "%"; // Added quotes around percent sign
 
-            var resultText = document.getElementById('sprainText'); //allows us to call it in HTML
-            resultText.innerHTML = sprainPercent + %;
-
-            var resultText2 = document.getElementById('breakText');
-            resultText2.innerHTML = breakPercent + %;
-        }
-
+        var resultText2 = document.getElementById('breakText');
+        resultText2.innerHTML = breakPercent + "%"; // Added quotes around percent sign
+    }
 </script>	
 
-
-<!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
 <style>	
 .body {
      margin: 0em;
@@ -83,148 +78,114 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(0,0%,100%);
 }
 
-  .page:target {
+.page:target {
     left: 0vw;
     z-index: 1;
+}
+
+.page-background { /* Added new class for page background color */
+    background-color: hsl(231, 59%, 72%); /* This code makes the background color of the page purple */
 }
 </style>
 
 <body>
-	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-
-<style>	
-.body {
-     margin: 0em;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(231, 59%, 72%); /* <!-- This code makes the background color of the page purple --> */
-}
-
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Broken bone or Sprain?</h1> <!--page header name-->
-</div>
-	
-<div id="content" class="w3-container">
-	<p>Are you feeling like you might have a broken bone but wonder if it is a sprain? Answer a few short questions to find out!</p>
-	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-<div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1> <!--page header name-->
-	</div>
-	
-    	<div id="content" class="w3-container">
-        <p style= "color: #3f093f"> <b> Are your eyes watery or itchy? </b> </p> <!--asking question-->
-        <a href="#two"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#two"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
-    	</div>
-</div>
-
-<div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1> <!--page header name-->
-	</div>
-	<!--
-    
-    -->
-	<div id="content" class="w3-container">
-		<p style= "color: #3f093f"> <b> Do you have a fever? </b> </p> <!--asking question-->
-        <a href="#three"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#three"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
-	</div>
-</div>	
-
-<div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1> <!--page header name-->
+		<h1>Broken bone or Sprain?</h1> <!--page header name-->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p style= "color: #3f093f"> <b> Do you have a sore throat? </b> </p> <!--asking question-->
-        <a href="#four"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#four"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
-	</div>
-</div>	
-
-<div class="page" id="four">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1> <!--page header name-->
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p style= "color: #3f093f"> <b> Are your symptoms seasonal or chronic? </b> </p> <!--asking question-->
-        <a href="#five"  onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
-        <a href="#five"  onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
-	</div>
-</div>
-
-<div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1> <!--page header name-->
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p style= "color: #3f093f"> <b> Are you sneezing? </b> </p> <!--asking question-->
-        <a href="#six"  onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
-        <a href="#six"  onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
-	</div>
-</div>
-
-<div class="page" id="six">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1> <!--page header name-->
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p style= "color: #3f093f"> <b> Do you have a cough? </b> </p> <!--asking question-->
-        <a href="#resultsPage"  onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
-        <a href="#resultsPage"  onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
-</div>
-
-<div class="page" id="resultsPage">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results!</h1> <!--page header name-->
+		<p>Are you feeling like you might have a broken bone but wonder if it is a sprain? Answer a few short questions to find out!</p>
+		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	</div>
 
-	<div id="content" class="w3-container">
-        <p style= "color: #3f093f"> <b> Click this button to see! </b> </p> <!--text inviting to click button-->
-        <a href="#huzzahPage"  onclick="totalSprainPercent();" class="w3-btn w3-black"> Results!!!</a> <!--moves to huzzah page-->
-    	</div>
+	<div class="page page-background" id="one"> <!-- Added class for page background color -->
+		<div id="header" class="w3-container w3-flat-carrot">
+			<h1>Question 1</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+	        <p style="color: #3f093f"> <b> Are your eyes watery or itchy? </b> </p> <!--asking question-->
+	        <a href="#two" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+	        <a href="#two" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
+	    </div>
 	</div>
-</div>
 
-<div class="page" id="huzzahPage">
-	<div class="w3-container w3-flat-carrot">
-		<h1>HUZZAH!</h1> <!--page header name-->
-        <p>Broken bone Percentage is: </p> <p id="breakText"></p> <!--displays broken bone percentage-->
-        <p>Sprain Percentage is: </p> <p id="sprainText"></p> <!--displays sprain percentage-->
+	<div class="page page-background" id="two"> <!-- Added class for page background color -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 2</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+			<p style="color: #3f093f"> <b> Do you have a fever? </b> </p> <!--asking question-->
+	        <a href="#three" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+	        <a href="#three" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
+		</div>
+	</div>	
+
+	<div class="page page-background" id="three"> <!-- Added class for page background color -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 3</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+			<p style="color: #3f093f"> <b> Do you have a sore throat? </b> </p> <!--asking question-->
+	        <a href="#four" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+	        <a href="#four" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
+		</div>
+	</div>	
+
+	<div class="page page-background" id="four"> <!-- Added class for page background color -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 4</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+			<p style="color: #3f093f"> <b> Are your symptoms seasonal or chronic? </b> </p> <!--asking question-->
+	        <a href="#five" onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
+	        <a href="#five" onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
+		</div>
 	</div>
-	
-	<div id="content" class="w3-container">
-        <p> </p>
-        <a href="#Huzzah" class="w3-btn w3-black"> Start Over </a> <!--goes to start-->
+
+	<div class="page page-background" id="five"> <!-- Added class for page background color -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 5</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+			<p style="color: #3f093f"> <b> Are you sneezing? </b> </p> <!--asking question-->
+	        <a href="#six" onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
+	        <a href="#six" onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
+		</div>
 	</div>
-	
+
+	<div class="page page-background" id="six"> <!-- Added class for page background color -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 6</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+			<p style="color: #3f093f"> <b> Do you have a cough? </b> </p> <!--asking question-->
+	        <a href="#resultsPage" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
+	        <a href="#resultsPage" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
+	    </div>
+	</div>
+
+	<div class="page" id="resultsPage">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Results!</h1> <!--page header name-->
+		</div>
+		<div id="content" class="w3-container">
+	        <p style="color: #3f093f"> <b> Click this button to see! </b> </p> <!--text inviting to click button-->
+	        <a href="#huzzahPage" onclick="totalSprainPercent();" class="w3-btn w3-black"> Results!!!</a> <!--moves to huzzah page-->
+	    </div>
+	</div>
+
+	<div class="page" id="huzzahPage">
+		<div class="w3-container w3-flat-carrot">
+			<h1>HUZZAH!</h1> <!--page header name-->
+	        <p>Broken bone Percentage is: <span id="breakText"></span></p> <!--displays broken bone percentage-->
+	        <p>Sprain Percentage is: <span id="sprainText"></span></p> <!--displays sprain percentage-->
+		</div>
+		<div id="content" class="w3-container">
+	        <p></p>
+	        <a href="#header" class="w3-btn w3-black"> Start Over </a> <!--goes to start-->
+		</div>
+	</div>
 </body>
 </html>
