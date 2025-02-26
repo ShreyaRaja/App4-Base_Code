@@ -55,10 +55,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var breakPercent = (break_count / 6) * 100;  //same as above but for break
 
         var resultText = document.getElementById('sprainText'); // allows us to call it in HTML
-        resultText.innerHTML = sprainPercent + "%"; // text displays results for sprain
+        resultText.innerHTML = sprainPercent.toFixed(2) + "%"; // text displays results for sprain
 
         var resultText2 = document.getElementById('breakText');
-        resultText2.innerHTML = breakPercent + "%"; // text displays results for break
+        resultText2.innerHTML = breakPercent.toFixed(2) + "%"; // text displays results for break
     }
 </script>	
 <style>	
@@ -74,7 +74,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(270, 100%, 92%); /*made light purple*/
+    background-color: hsl(270, 100%, 85%); /*made light purple*/
 }
 
 .page:target {
@@ -102,7 +102,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Question 1</h1> <!--page header name-->
 		</div>
 		<div id="content" class="w3-container">
-	        <p style="color: #3f093f"> <b> Are your eyes watery or itchy? </b> </p> <!--asking question-->
+	        <p style="color: #3f093f"> <b> Can you still move the injured part even with pain or stiffness? </b> </p> <!--asking question-->
 	        <a href="#two" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
 	        <a href="#two" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 	    </div>
@@ -113,7 +113,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Question 2</h1> <!--page header name-->
 		</div>
 		<div id="content" class="w3-container">
-			<p style="color: #3f093f"> <b> Do you have a fever? </b> </p> <!--asking question-->
+			<p style="color: #3f093f"> <b> Are you able to put weight on the injury? </b> </p> <!--asking question-->
 	        <a href="#three" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
 	        <a href="#three" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 		</div>
@@ -124,7 +124,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Question 3</h1> <!--page header name-->
 		</div>
 		<div id="content" class="w3-container">
-			<p style="color: #3f093f"> <b> Do you have a sore throat? </b> </p> <!--asking question-->
+			<p style="color: #3f093f"> <b> Do you hear/feel a popping in the area? </b> </p> <!--asking question-->
 	        <a href="#four" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
 	        <a href="#four" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 		</div>
@@ -135,7 +135,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Question 4</h1> <!--page header name-->
 		</div>
 		<div id="content" class="w3-container">
-			<p style="color: #3f093f"> <b> Are your symptoms seasonal or chronic? </b> </p> <!--asking question-->
+			<p style="color: #3f093f"> <b> Is there numbness near the injury? </b> </p> <!--asking question-->
 	        <a href="#five" onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
 	        <a href="#five" onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
 		</div>
@@ -146,7 +146,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Question 5</h1> <!--page header name-->
 		</div>
 		<div id="content" class="w3-container">
-			<p style="color: #3f093f"> <b> Are you sneezing? </b> </p> <!--asking question-->
+			<p style="color: #3f093f"> <b> Are you able to see/feel a bone abnormally sticking out? </b> </p> <!--asking question-->
 	        <a href="#six" onclick="breakAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to break counter--> <!--next page-->
 	        <a href="#six" onclick="sprainAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to sprain counter--> <!--next page-->
 		</div>
@@ -157,7 +157,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Question 6</h1> <!--page header name-->
 		</div>
 		<div id="content" class="w3-container">
-			<p style="color: #3f093f"> <b> Do you have a cough? </b> </p> <!--asking question-->
+			<p style="color: #3f093f"> <b> Is the injured area tender to touch? </b> </p> <!--asking question-->
 	        <a href="#resultsPage" onclick="sprainAdd();" class="w3-btn w3-black"> Yes</a><!--if yes is clicked, 1 is added to sprain counter--> <!--next page-->
 	        <a href="#resultsPage" onclick="breakAdd();" class="w3-btn w3-black">No</a> <!--if no is clicked, 1 is added to break counter--> <!--next page-->
 	    </div>
