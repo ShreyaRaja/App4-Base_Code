@@ -53,7 +53,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     function totalSprainPercent(){
 	var total_count = sprain_count + break_count; // trying to prevent the percentages from going above 100%
 	    if (total_count === 0) {
-                total_count = 1; 
+                total_count = 1; // make sure there is no division by 0!
 	    	}	
         var sprainPercent = (sprain_count / total_count) * 100; // calculates averages and multiply by 100 to make percent
         var breakPercent = (break_count / total_count) * 100;  //same as above but for break
@@ -66,6 +66,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     }
 </script>	
 <style>	
+<style>
+       	img, object{
+            	max-height:90%;
+        	max-width:90%; /*hopefully it resizes the image*/
+        	}
+</style>
 .body {
      margin: 0em;
 }
@@ -99,6 +105,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started :) </a>
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+		<img src="img_chania.jpg" alt="Flowers in Chania"> <!--testing image -->
 	</div>
 
 	<div class="page" id="one"> <!-- created page -->
