@@ -51,8 +51,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     }
 
     function totalSprainPercent(){
-        var sprainPercent = (sprain_count / 6) * 100; // calculates averages and multiply by 100 to make percent
-        var breakPercent = (break_count / 6) * 100;  //same as above but for break
+	var total_count = sprain_count + break_count; // trying to prevent the percentages from going above 100%
+        var sprainPercent = (sprain_count / total_count) * 100; // calculates averages and multiply by 100 to make percent
+        var breakPercent = (break_count / total_count) * 100;  //same as above but for break
 
         var resultText = document.getElementById('sprainText'); // allows us to call it in HTML
         resultText.innerHTML = sprainPercent.toFixed(2) + "%"; // text displays results for sprain
